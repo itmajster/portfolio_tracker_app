@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/purchaseForm.css">
+    <title>Purchase Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Purchase Form</h1>
+        <form action="/purchaseForm" method="POST">
+            <label for="ticker">Ticker:</label>
+            <input type="text" id="ticker" name="ticker" required>
+
+            <label for="sharePrice">Share Price:</label>
+            <input type="number" id="sharePrice" name="sharePrice" required>
+
+            <label for="shares">Shares:</label>
+            <input type="number" id="shares" name="shares" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <% if (submitted) { %>
+            <div class="island">
+                <p>Position added successfully!</p>
+                <p>Do you want to add more positions or <a href="/">return to the home page</a>?</p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
